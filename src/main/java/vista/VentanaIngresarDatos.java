@@ -26,21 +26,105 @@ public class VentanaIngresarDatos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel2 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        cajaidpasajero = new javax.swing.JTextField();
+        cajanombre = new javax.swing.JTextField();
+        cajaedad = new javax.swing.JTextField();
+        cajaidequipaje = new javax.swing.JTextField();
+        cajaPeso = new javax.swing.JTextField();
+        Volver = new javax.swing.JButton();
+        Ingresar = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        botonIngresa = new javax.swing.JLabel();
+
+        jLabel2.setText("jLabel2");
+
+        jLabel7.setText("jLabel7");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cajaidpasajero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaidpasajeroActionPerformed(evt);
+            }
+        });
+        jPanel2.add(cajaidpasajero, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, 90, -1));
+        jPanel2.add(cajanombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 90, -1));
+        jPanel2.add(cajaedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 100, -1));
+        jPanel2.add(cajaidequipaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 90, -1));
+        jPanel2.add(cajaPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 100, -1));
+
+        Volver.setText("Volver");
+        Volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VolverActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, -1, -1));
+
+        Ingresar.setText("Ingresar");
+        jPanel2.add(Ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("nombre");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 80, 40));
+
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("peso de equipaje");
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 130, 40));
+
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("id equipaje");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 80, 40));
+
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("edad");
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 80, 40));
+
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("id pasajero");
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 80, 40));
+
+        botonIngresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/avianca-787-dreamliner.jpg"))); // NOI18N
+        jPanel2.add(botonIngresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cajaidpasajeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaidpasajeroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaidpasajeroActionPerformed
+
+    private void VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverActionPerformed
+        dispose();
+Menu v= new Menu();
+v.setVisible(true);
+
+    }//GEN-LAST:event_VolverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +162,34 @@ public class VentanaIngresarDatos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonIngresar;
+    private javax.swing.JButton Ingresar;
+    private javax.swing.JButton Volver;
+    private javax.swing.JLabel botonIngresa;
+    private javax.swing.JButton botonvolver;
+    private javax.swing.JTextField cajaPeso;
+    private javax.swing.JTextField cajaedad;
+    private javax.swing.JTextField cajaidedad;
+    private javax.swing.JTextField cajaidequip;
+    private javax.swing.JTextField cajaidequipaje;
+    private javax.swing.JTextField cajaidnombre;
+    private javax.swing.JTextField cajaidpas;
+    private javax.swing.JTextField cajaidpasajero;
+    private javax.swing.JTextField cajanombre;
+    private javax.swing.JTextField cajapeso;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -93,7 +93,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_cajaUsuarioActionPerformed
 
     private void botonIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIngresarActionPerformed
-       VentanaMenu v= new VentanaMenu();
+       Menu v= new Menu();
        v.setVisible(true);
        dispose();
 
