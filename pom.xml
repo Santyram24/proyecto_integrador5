@@ -14,7 +14,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.11</version>
+            <version>8.0.29</version>
         </dependency>
     </dependencies>
     <properties>
@@ -22,7 +22,4 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    
-    
-     
 </project>
