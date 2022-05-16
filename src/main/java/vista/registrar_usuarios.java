@@ -4,7 +4,8 @@
  */
 package vista;
 
-
+import controlador.SQLusuarios;
+import controlador.UsuarioNuevos;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +19,7 @@ public class registrar_usuarios extends javax.swing.JFrame {
      */
     public registrar_usuarios() {
         initComponents();
+        BtnRegistrar.setEnabled(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -86,13 +88,18 @@ public class registrar_usuarios extends javax.swing.JFrame {
         jPanel1.add(TextCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 150, -1));
 
         TipoEmpBox.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        TipoEmpBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2" }));
+        TipoEmpBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2" }));
+        TipoEmpBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                TipoEmpBoxItemStateChanged(evt);
+            }
+        });
         TipoEmpBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TipoEmpBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(TipoEmpBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, -1, -1));
+        jPanel1.add(TipoEmpBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, 100, -1));
         jPanel1.add(TextContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 89, 150, 30));
 
         Textconfcontraseña.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -109,6 +116,11 @@ public class registrar_usuarios extends javax.swing.JFrame {
 
         BtnVolver.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         BtnVolver.setText("Volver");
+        BtnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnVolverActionPerformed(evt);
+            }
+        });
         jPanel1.add(BtnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, -1, -1));
 
         resultadoComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -152,9 +164,62 @@ public class registrar_usuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_resultadoComboBoxActionPerformed
 
     private void BtnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegistrarActionPerformed
-        
+        SQLusuarios modsql = new SQLusuarios();
+        UsuarioNuevos mod = new UsuarioNuevos();
+        String pass = new String(TextContraseña.getPassword());
+        String passcon = new String(Textconfcontraseña.getPassword());
+        String tipoEmpleado = (String) TipoEmpBox.getSelectedItem();
+        int conversion = Integer.parseInt(tipoEmpleado);
+
+        if (pass.equals(passcon)) {
+
+            mod.setUsuario(TextUsuario.getText());
+            mod.setContraseña(pass);
+            mod.setCorreo(TextCorreo.getText());
+
+            mod.setTipoEmpleado(conversion);
+
+            if (modsql.registrar(mod)) {
+                JOptionPane.showMessageDialog(null, "Registro Guardado");
+                TextUsuario.setText("");
+                TextContraseña.setText("");
+                Textconfcontraseña.setText("");
+                TextCorreo.setText("");
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Error al guardar");
+
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "las contraseñas no coinciden");
+
+        }
 
     }//GEN-LAST:event_BtnRegistrarActionPerformed
+
+    private void TipoEmpBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_TipoEmpBoxItemStateChanged
+        String labor = (String) TipoEmpBox.getSelectedItem();
+        if (labor.equals("0")) {
+            resultadoComboBox.setText("");
+            BtnRegistrar.setEnabled(false);
+        }
+        if (labor.equals("1")) {
+            resultadoComboBox.setText("Recepcionista");
+            BtnRegistrar.setEnabled(true);
+        }
+        if (labor.equals("2")) {
+            resultadoComboBox.setText("Mozo");
+            BtnRegistrar.setEnabled(true);
+        }
+
+
+    }//GEN-LAST:event_TipoEmpBoxItemStateChanged
+
+    private void BtnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVolverActionPerformed
+         dispose();
+        Menu m = new Menu();
+        m.setVisible(true);
+    }//GEN-LAST:event_BtnVolverActionPerformed
 
     /**
      * @param args the command line arguments

@@ -33,6 +33,7 @@ public class Menu extends javax.swing.JFrame {
         botonMostrarrecepcionista = new javax.swing.JButton();
         EliminarDatos = new javax.swing.JButton();
         botonVolver = new javax.swing.JButton();
+        BotonNuevosEmpleados = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
@@ -55,7 +56,7 @@ public class Menu extends javax.swing.JFrame {
                 botonMostrarMozoActionPerformed(evt);
             }
         });
-        jPanel1.add(botonMostrarMozo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 150, -1));
+        jPanel1.add(botonMostrarMozo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 150, -1));
 
         botonMostrarrecepcionista.setText("Datos del Recepcionista");
         botonMostrarrecepcionista.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +64,7 @@ public class Menu extends javax.swing.JFrame {
                 botonMostrarrecepcionistaActionPerformed(evt);
             }
         });
-        jPanel1.add(botonMostrarrecepcionista, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, -1, -1));
+        jPanel1.add(botonMostrarrecepcionista, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
 
         EliminarDatos.setText("EliminarDatos");
         EliminarDatos.addActionListener(new java.awt.event.ActionListener() {
@@ -80,6 +81,14 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 150, -1));
+
+        BotonNuevosEmpleados.setText("Nuevos");
+        BotonNuevosEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonNuevosEmpleadosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BotonNuevosEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/avianca-787-dreamliner.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -128,6 +137,13 @@ Eli.setVisible(true);
 dispose();
     }//GEN-LAST:event_EliminarDatosActionPerformed
 
+    private void BotonNuevosEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonNuevosEmpleadosActionPerformed
+       dispose();
+
+        permisosjefe m = new permisosjefe();
+        m.setVisible(true);
+    }//GEN-LAST:event_BotonNuevosEmpleadosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -164,6 +180,7 @@ dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonNuevosEmpleados;
     private javax.swing.JButton EliminarDatos;
     private javax.swing.JButton botonIngresar;
     private javax.swing.JButton botonMostrarMozo;

@@ -20,7 +20,7 @@ public class SQLusuarios extends Conexion {
             ps = con.prepareStatement(sql);
             ps.setString(1, usr.getUsuario());
             ps.setString(2, usr.getContraseña());
-            ps.setString(1, usr.getCorreo());
+            ps.setString(3, usr.getCorreo());
             ps.setInt(4, usr.getTipoEmpleado());
             ps.execute();
             return true;

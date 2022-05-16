@@ -15,20 +15,23 @@ import javax.swing.JOptionPane;
  * @author Srami
  */
 public class permisosjefe extends javax.swing.JFrame {
-Conexion cc = new Conexion();
+
+    Conexion cc = new Conexion();
+
     /**
      * Creates new form permisosjefe
      */
     public permisosjefe() {
         initComponents();
     }
-public void Validar() {
+
+    public void Validar() {
         Connection con = null;
         PreparedStatement pst = null;
         ResultSet rs = null;
-        String usuario =CajaJefe.getText();
+        String usuario = CajaJefe.getText();
         String contraseña = ContraseñaJefe.getText();
-        
+
         if (usuario.equals("") || contraseña.equals("")) {
             JOptionPane.showMessageDialog(null, "hay un campo vacio, por favor llenarlos");
         } else {
@@ -46,16 +49,17 @@ public void Validar() {
                     JOptionPane.showMessageDialog(null, "credenciales incorrectas,vuelve a intentarlo");
                     CajaJefe.setText("");
                     ContraseñaJefe.setText("");
-                    
+
                 }
-                
+
             } catch (Exception e) {
                 System.err.println(e.getMessage());
                 JOptionPane.showMessageDialog(null, "Ocurrio un error,comunicate con los desarrolladores ");
-                
+
             }
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -72,7 +76,7 @@ public void Validar() {
         jLabel4 = new javax.swing.JLabel();
         ContraseñaJefe = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        BotonVolver = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
@@ -103,15 +107,20 @@ public void Validar() {
         jPanel1.add(ContraseñaJefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 100, -1));
 
         jButton1.setText("Ingresar");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, -1, -1));
-
-        jButton2.setText("Volver");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, -1, -1));
+
+        BotonVolver.setText("Volver");
+        BotonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonVolverActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BotonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/avianca-787-dreamliner.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -134,9 +143,16 @@ public void Validar() {
         // TODO add your handling code here:
     }//GEN-LAST:event_CajaJefeActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void BotonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVolverActionPerformed
+        dispose();
+        Menu m = new Menu();
+        m.setVisible(true);
+
+    }//GEN-LAST:event_BotonVolverActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Validar();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,10 +190,10 @@ public void Validar() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonVolver;
     private javax.swing.JTextField CajaJefe;
     private javax.swing.JPasswordField ContraseñaJefe;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
