@@ -31,7 +31,6 @@ public class Menu extends javax.swing.JFrame {
         botonIngresar = new javax.swing.JButton();
         botonMostrarMozo = new javax.swing.JButton();
         botonMostrarrecepcionista = new javax.swing.JButton();
-        EliminarDatos = new javax.swing.JButton();
         botonVolver = new javax.swing.JButton();
         BotonNuevosEmpleados = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -66,21 +65,13 @@ public class Menu extends javax.swing.JFrame {
         });
         jPanel1.add(botonMostrarrecepcionista, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
 
-        EliminarDatos.setText("EliminarDatos");
-        EliminarDatos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EliminarDatosActionPerformed(evt);
-            }
-        });
-        jPanel1.add(EliminarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 150, -1));
-
         botonVolver.setText("Volver");
         botonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonVolverActionPerformed(evt);
             }
         });
-        jPanel1.add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 150, -1));
+        jPanel1.add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 150, -1));
 
         BotonNuevosEmpleados.setText("Nuevos");
         BotonNuevosEmpleados.addActionListener(new java.awt.event.ActionListener() {
@@ -131,12 +122,6 @@ mr.setVisible(true);
 dispose();
     }//GEN-LAST:event_botonMostrarrecepcionistaActionPerformed
 
-    private void EliminarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarDatosActionPerformed
-        VentanaEliminarDatos Eli= new VentanaEliminarDatos();
-Eli.setVisible(true);
-dispose();
-    }//GEN-LAST:event_EliminarDatosActionPerformed
-
     private void BotonNuevosEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonNuevosEmpleadosActionPerformed
        dispose();
 
@@ -181,7 +166,6 @@ dispose();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonNuevosEmpleados;
-    private javax.swing.JButton EliminarDatos;
     private javax.swing.JButton botonIngresar;
     private javax.swing.JButton botonMostrarMozo;
     private javax.swing.JButton botonMostrarrecepcionista;
