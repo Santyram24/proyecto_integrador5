@@ -78,38 +78,48 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("           usuario");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 160, 70));
+        jLabel3.setText("Usuario:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 100, 30));
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("        contraseña");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 160, 50));
+        jLabel4.setText("Contraseña:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 100, 30));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("        Bienvenido");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 160, 80));
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setText("BIENVENIDO");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 160, 30));
 
-        botonIngresar.setText("ingresar");
+        botonIngresar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        botonIngresar.setText("Ingresar");
         botonIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonIngresarActionPerformed(evt);
             }
         });
-        jPanel1.add(botonIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, -1, -1));
+        jPanel1.add(botonIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, 110, -1));
 
+        cajaUsuario.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         cajaUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajaUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(cajaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 90, -1));
-        jPanel1.add(cajaContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 100, -1));
+        jPanel1.add(cajaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 190, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/avianca-787-dreamliner.jpg"))); // NOI18N
+        cajaContraseña.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        cajaContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaContraseñaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cajaContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 190, -1));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wallpaper.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -135,6 +145,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
 
     }//GEN-LAST:event_botonIngresarActionPerformed
+
+    private void cajaContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaContraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaContraseñaActionPerformed
 
     /**
      * @param args the command line arguments

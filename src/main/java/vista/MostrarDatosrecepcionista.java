@@ -48,22 +48,25 @@ public class MostrarDatosrecepcionista extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 480, 320));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 480, 320));
 
+        botonEliminar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         botonEliminar.setText("Eliminar");
-        getContentPane().add(botonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, -1, -1));
+        getContentPane().add(botonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, -1, -1));
 
+        botonVolver.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         botonVolver.setText("Volver");
         botonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonVolverActionPerformed(evt);
             }
         });
-        getContentPane().add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 370, -1, -1));
+        getContentPane().add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/avianca-787-dreamliner.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wallpaper.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 430));
+        jLabel2.setMaximumSize(new java.awt.Dimension(600, 600));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

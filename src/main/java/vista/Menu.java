@@ -41,54 +41,59 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        botonIngresar.setText("ingresar");
+        botonIngresar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        botonIngresar.setText("Ingresar");
         botonIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonIngresarActionPerformed(evt);
             }
         });
-        jPanel1.add(botonIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 150, -1));
+        jPanel1.add(botonIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 230, -1));
 
+        botonMostrarMozo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         botonMostrarMozo.setText("Datos del Mozo");
         botonMostrarMozo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonMostrarMozoActionPerformed(evt);
             }
         });
-        jPanel1.add(botonMostrarMozo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 150, -1));
+        jPanel1.add(botonMostrarMozo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 230, -1));
 
+        botonMostrarrecepcionista.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         botonMostrarrecepcionista.setText("Datos del Recepcionista");
         botonMostrarrecepcionista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonMostrarrecepcionistaActionPerformed(evt);
             }
         });
-        jPanel1.add(botonMostrarrecepcionista, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
+        jPanel1.add(botonMostrarrecepcionista, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 230, -1));
 
+        botonVolver.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         botonVolver.setText("Volver");
         botonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonVolverActionPerformed(evt);
             }
         });
-        jPanel1.add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 150, -1));
+        jPanel1.add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 550, 100, -1));
 
+        BotonNuevosEmpleados.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         BotonNuevosEmpleados.setText("Nuevos");
         BotonNuevosEmpleados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonNuevosEmpleadosActionPerformed(evt);
             }
         });
-        jPanel1.add(BotonNuevosEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
+        jPanel1.add(BotonNuevosEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/avianca-787-dreamliner.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wallpaper.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

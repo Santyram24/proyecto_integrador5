@@ -46,48 +46,48 @@ public class registrar_usuarios extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("usuario");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 50, 30));
+        jLabel1.setText("Usuario:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 70, 30));
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("contraseña");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
+        jLabel2.setText("Contraseña:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("<html>confirmar contraseña</html>");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 130, 40));
+        jLabel3.setText("Confirmar contraseña:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 180, 40));
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("correo");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
+        jLabel4.setText("Correo:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("tipo de empleado");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, -1, -1));
+        jLabel5.setText("Tipo de empleado:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
 
-        TextUsuario.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        TextUsuario.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         TextUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 150, -1));
+        jPanel1.add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 150, -1));
 
-        TextCorreo.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        TextCorreo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         TextCorreo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextCorreoActionPerformed(evt);
             }
         });
-        jPanel1.add(TextCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 150, -1));
+        jPanel1.add(TextCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 150, -1));
 
-        TipoEmpBox.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        TipoEmpBox.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         TipoEmpBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2" }));
         TipoEmpBox.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -99,49 +99,52 @@ public class registrar_usuarios extends javax.swing.JFrame {
                 TipoEmpBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(TipoEmpBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, 100, -1));
-        jPanel1.add(TextContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 89, 150, 30));
+        jPanel1.add(TipoEmpBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 50, -1));
 
-        Textconfcontraseña.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jPanel1.add(Textconfcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 150, -1));
+        TextContraseña.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jPanel1.add(TextContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 150, 30));
 
-        BtnRegistrar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        Textconfcontraseña.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jPanel1.add(Textconfcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 150, -1));
+
+        BtnRegistrar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         BtnRegistrar.setText("Registrar");
         BtnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnRegistrarActionPerformed(evt);
             }
         });
-        jPanel1.add(BtnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
+        jPanel1.add(BtnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, -1, -1));
 
-        BtnVolver.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        BtnVolver.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         BtnVolver.setText("Volver");
         BtnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnVolverActionPerformed(evt);
             }
         });
-        jPanel1.add(BtnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, -1, -1));
+        jPanel1.add(BtnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, -1, -1));
 
+        resultadoComboBox.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         resultadoComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resultadoComboBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(resultadoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 130, -1));
+        jPanel1.add(resultadoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 120, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/avianca-787-dreamliner.jpg"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 400));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wallpaper.jpg"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 590));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

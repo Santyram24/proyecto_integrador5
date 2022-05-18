@@ -85,51 +85,53 @@ public class permisosjefe extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Usuario");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 90, 20));
+        jLabel3.setText("Usuario:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 90, 20));
 
-        CajaJefe.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        CajaJefe.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         CajaJefe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CajaJefeActionPerformed(evt);
             }
         });
-        jPanel1.add(CajaJefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 100, -1));
+        jPanel1.add(CajaJefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 180, -1));
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Contraseña");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+        jLabel4.setText("Contraseña:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, -1, -1));
 
-        ContraseñaJefe.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jPanel1.add(ContraseñaJefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 100, -1));
+        ContraseñaJefe.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jPanel1.add(ContraseñaJefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 180, -1));
 
+        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton1.setText("Ingresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 50, -1, -1));
 
+        BotonVolver.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         BotonVolver.setText("Volver");
         BotonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonVolverActionPerformed(evt);
             }
         });
-        jPanel1.add(BotonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, -1, -1));
+        jPanel1.add(BotonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/avianca-787-dreamliner.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wallpaper.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

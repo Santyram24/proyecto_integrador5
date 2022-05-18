@@ -52,17 +52,18 @@ public class MostrarDatosMozo extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 470, 270));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 470, 270));
 
+        botonVolver.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         botonVolver.setText("Volver");
         botonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonVolverActionPerformed(evt);
             }
         });
-        jPanel1.add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, -1, -1));
+        jPanel1.add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/avianca-787-dreamliner.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wallpaper.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
