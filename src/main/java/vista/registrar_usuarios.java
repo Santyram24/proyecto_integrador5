@@ -20,6 +20,7 @@ public class registrar_usuarios extends javax.swing.JFrame {
     public registrar_usuarios() {
         initComponents();
         BtnRegistrar.setEnabled(false);
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")

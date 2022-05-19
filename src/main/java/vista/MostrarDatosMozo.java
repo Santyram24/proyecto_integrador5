@@ -15,6 +15,7 @@ public class MostrarDatosMozo extends javax.swing.JFrame {
      */
     public MostrarDatosMozo() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

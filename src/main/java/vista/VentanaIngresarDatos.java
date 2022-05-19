@@ -15,6 +15,7 @@ public class VentanaIngresarDatos extends javax.swing.JFrame {
      */
     public VentanaIngresarDatos() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
