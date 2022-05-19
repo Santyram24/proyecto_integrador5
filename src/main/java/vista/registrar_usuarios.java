@@ -78,7 +78,7 @@ public class registrar_usuarios extends javax.swing.JFrame {
                 TextUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 150, -1));
+        jPanel1.add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 200, -1));
 
         TextCorreo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         TextCorreo.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +86,7 @@ public class registrar_usuarios extends javax.swing.JFrame {
                 TextCorreoActionPerformed(evt);
             }
         });
-        jPanel1.add(TextCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 150, -1));
+        jPanel1.add(TextCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 200, -1));
 
         TipoEmpBox.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         TipoEmpBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2" }));
@@ -103,10 +103,10 @@ public class registrar_usuarios extends javax.swing.JFrame {
         jPanel1.add(TipoEmpBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 50, -1));
 
         TextContraseña.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jPanel1.add(TextContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 150, 30));
+        jPanel1.add(TextContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 200, 30));
 
         Textconfcontraseña.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jPanel1.add(Textconfcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 150, -1));
+        jPanel1.add(Textconfcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 200, -1));
 
         BtnRegistrar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         BtnRegistrar.setText("Registrar");
@@ -132,7 +132,7 @@ public class registrar_usuarios extends javax.swing.JFrame {
                 resultadoComboBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(resultadoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 120, -1));
+        jPanel1.add(resultadoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 130, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wallpaper.jpg"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 590));
@@ -184,18 +184,18 @@ public class registrar_usuarios extends javax.swing.JFrame {
             mod.setTipoEmpleado(conversion);
 
             if (modsql.registrar(mod)) {
-                JOptionPane.showMessageDialog(null, "Registro Guardado");
+                JOptionPane.showMessageDialog(this, "Registro Guardado");
                 TextUsuario.setText("");
                 TextContraseña.setText("");
                 Textconfcontraseña.setText("");
                 TextCorreo.setText("");
 
             } else {
-                JOptionPane.showMessageDialog(null, "Error al guardar");
+                JOptionPane.showMessageDialog(this, "Error al guardar");
 
             }
         } else {
-            JOptionPane.showMessageDialog(null, "las contraseñas no coinciden");
+            JOptionPane.showMessageDialog(this, "las contraseñas no coinciden");
 
         }
 

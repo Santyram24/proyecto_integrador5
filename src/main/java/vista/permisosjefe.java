@@ -34,11 +34,11 @@ public class permisosjefe extends javax.swing.JFrame {
         String contraseña = ContraseñaJefe.getText();
 
         if (usuario.equals("") || contraseña.equals("")) {
-            JOptionPane.showMessageDialog(null, "hay un campo vacio, por favor llenarlos");
+            JOptionPane.showMessageDialog(this, "hay un campo vacio, por favor llenarlos");
         } else {
             try {
                 con = cc.realizarConexion();
-                pst = con.prepareStatement("select usuario,contraseña from jefe where nombre='" + usuario
+                pst = con.prepareStatement("select usuario,contraseña from jefe where usuario='" + usuario
                         + "' and contraseña ='" + contraseña + "'");
                 rs = pst.executeQuery();
                 if (rs.next()) {
@@ -47,7 +47,7 @@ public class permisosjefe extends javax.swing.JFrame {
                     m.setVisible(true);
                 } else {
 
-                    JOptionPane.showMessageDialog(null, "credenciales incorrectas,vuelve a intentarlo");
+                    JOptionPane.showMessageDialog(this, "credenciales incorrectas,vuelve a intentarlo");
                     CajaJefe.setText("");
                     ContraseñaJefe.setText("");
 
@@ -55,7 +55,7 @@ public class permisosjefe extends javax.swing.JFrame {
 
             } catch (Exception e) {
                 System.err.println(e.getMessage());
-                JOptionPane.showMessageDialog(null, "Ocurrio un error,comunicate con los desarrolladores ");
+                JOptionPane.showMessageDialog(this, "Ocurrio un error,comunicate con los desarrolladores ");
 
             }
         }
@@ -88,8 +88,8 @@ public class permisosjefe extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Usuario:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 90, 20));
+        jLabel3.setText("Jefe:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 60, 20));
 
         CajaJefe.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         CajaJefe.addActionListener(new java.awt.event.ActionListener() {

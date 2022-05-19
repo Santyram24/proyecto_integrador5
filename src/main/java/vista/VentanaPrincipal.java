@@ -34,7 +34,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         String contraseña = cajaContraseña.getText();
         
         if (usuario.equals("") || contraseña.equals("")) {
-            JOptionPane.showMessageDialog(null, "hay un campo vacio, por favor llenarlos");
+            JOptionPane.showMessageDialog(this,"hay un campo vacio, por favor llenarlos");
         } else {
             try {
                 con = cc.realizarConexion();
@@ -47,7 +47,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     m.setVisible(true);
                 } else {
 
-                    JOptionPane.showMessageDialog(null, "credenciales incorrectas,vuelve a intentarlo");
+                    JOptionPane.showMessageDialog(this, "credenciales incorrectas,vuelve a intentarlo");
                     cajaUsuario.setText("");
                     cajaContraseña.setText("");
                     
@@ -55,7 +55,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 
             } catch (Exception e) {
                 System.err.println(e.getMessage());
-                JOptionPane.showMessageDialog(null, "Ocurrio un error,comunicate con los desarrolladores ");
+                JOptionPane.showMessageDialog(this, "Ocurrio un error,comunicate con los desarrolladores ");
                 
             }
         }
