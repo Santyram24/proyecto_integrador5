@@ -16,6 +16,7 @@ public class MostrarDatosrecepcionista extends javax.swing.JFrame {
     public MostrarDatosrecepcionista() {
         initComponents();
         setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**

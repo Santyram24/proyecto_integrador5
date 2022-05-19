@@ -24,6 +24,7 @@ public class permisosjefe extends javax.swing.JFrame {
     public permisosjefe() {
         initComponents();
         setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     public void Validar() {

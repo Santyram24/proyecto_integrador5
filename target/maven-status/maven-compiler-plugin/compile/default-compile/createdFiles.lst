@@ -19,8 +19,10 @@ vista\VentanaPrincipal.class
 vista\Menu$1.class
 controlador\UsuarioNuevos.class
 vista\registrar_usuarios$1.class
+controlador\SQLequipaje.class
 vista\permisosjefe$2.class
 vista\MostrarDatosMozo$1.class
+controlador\DatosEquipaje.class
 vista\MostrarDatosMozo.class
 vista\VentanaIngresarDatos.class
 vista\Menu$3.class
