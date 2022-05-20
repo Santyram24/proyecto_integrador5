@@ -182,7 +182,6 @@ public class registrar_usuarios extends javax.swing.JFrame {
             mod.setUsuario(TextUsuario.getText());
             mod.setContraseña(pass);
             mod.setCorreo(TextCorreo.getText());
-
             mod.setTipoEmpleado(conversion);
 
             if (modsql.registrar(mod)) {

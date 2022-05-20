@@ -4,6 +4,10 @@
  */
 package vista;
 
+import controlador.DatosEquipaje;
+import controlador.SQLequipaje;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Srami
@@ -84,6 +88,11 @@ public class VentanaIngresarDatos extends javax.swing.JFrame {
 
         Ingresar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         Ingresar.setText("Ingresar");
+        Ingresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IngresarActionPerformed(evt);
+            }
+        });
         jPanel2.add(Ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -93,8 +102,8 @@ public class VentanaIngresarDatos extends javax.swing.JFrame {
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("Peso de equipaje:");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 150, 40));
+        jLabel13.setText("Peso de equipaje (Kg):");
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 190, 40));
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
@@ -138,6 +147,44 @@ Menu v= new Menu();
 v.setVisible(true);
 
     }//GEN-LAST:event_VolverActionPerformed
+
+    private void IngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarActionPerformed
+        // TODO add your handling code here:
+        SQLequipaje modsql = new SQLequipaje();
+        DatosEquipaje equ = new DatosEquipaje();
+                     
+           
+        if(cajaidpasajero.getText().isEmpty() || cajanombre.getText().isEmpty()
+           || cajavuelo.getText().isEmpty() || cajaidequipaje.getText().isEmpty()
+           || cajaPeso.getText().isEmpty()){
+            
+        JOptionPane.showMessageDialog(this,"Campos Vacios");
+        
+        }else{
+            equ.setIDpasajero(cajaidpasajero.getText());
+            equ.setNombre(cajanombre.getText());
+            equ.setVuelo(cajavuelo.getText());
+            equ.setIDequipaje(cajaidequipaje.getText());
+            equ.setPeso(cajaPeso.getText());                  
+            
+
+            if (modsql.registrar(equ)) {
+                JOptionPane.showMessageDialog(this, "Registro Guardado");
+                cajaidpasajero.setText("");
+                cajanombre.setText("");
+                cajavuelo.setText("");
+                cajaidequipaje.setText("");
+                cajaPeso.setText("");
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al guardar");
+
+            }
+           
+        }      
+        
+        
+    }//GEN-LAST:event_IngresarActionPerformed
 
     /**
      * @param args the command line arguments
