@@ -21,13 +21,9 @@ public class Menu extends javax.swing.JFrame {
         this.setResizable(false);
         botonMostrarrecepcionista.setEnabled(true); 
         botonMostrarMozo.setEnabled(true); 
-        
-        //aqui valida el tipo de empleado para habilitar el boton corrspondiente
-        if(tipoEmpleado == 1){            
-        botonMostrarMozo.setEnabled(false); ;
-        }else if(tipoEmpleado == 2){
-        botonMostrarrecepcionista.setEnabled(false); ;
-        }
+
+        ValidarUsuario();        
+       
     }
 
     /**
@@ -147,6 +143,14 @@ dispose();
         m.setVisible(true);
     }//GEN-LAST:event_BotonNuevosEmpleadosActionPerformed
 
+    public void ValidarUsuario(){
+         //aqui valida el tipo de empleado para habilitar el boton corrspondiente
+        if(tipoEmpleado == 1){            
+        botonMostrarMozo.setEnabled(false); ;
+        }else if(tipoEmpleado == 2){
+        botonMostrarrecepcionista.setEnabled(false); ;
+        }
+    }
     /**
      * @param args the command line arguments
      */
