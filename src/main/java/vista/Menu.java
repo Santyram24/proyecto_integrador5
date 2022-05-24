@@ -4,6 +4,8 @@
  */
 package vista;
 
+import static vista.VentanaPrincipal.tipoEmpleado;
+
 /**
  *
  * @author Srami
@@ -17,6 +19,15 @@ public class Menu extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         this.setResizable(false);
+        botonMostrarrecepcionista.setEnabled(true); 
+        botonMostrarMozo.setEnabled(true); 
+        
+        //aqui valida el tipo de empleado para habilitar el boton corrspondiente
+        if(tipoEmpleado == 1){            
+        botonMostrarMozo.setEnabled(false); ;
+        }else if(tipoEmpleado == 2){
+        botonMostrarrecepcionista.setEnabled(false); ;
+        }
     }
 
     /**

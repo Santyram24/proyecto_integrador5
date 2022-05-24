@@ -19,7 +19,8 @@ import java.sql.*;
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
     
-    Conexion cc = new Conexion();
+    Conexion cc = new Conexion(); 
+    public static int tipoEmpleado=0;
     
     public VentanaPrincipal() {
         initComponents();
@@ -30,6 +31,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public void Validar() {
         Connection con = null;
         PreparedStatement pst = null;
+        Statement s =null; 
         ResultSet rs = null;
         String usuario = cajaUsuario.getText();
         String contraseña = cajaContraseña.getText();
@@ -42,10 +44,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 pst = con.prepareStatement("select usuario,contraseña from empleados where usuario='" + usuario
                         + "' and contraseña ='" + contraseña + "'");
                 rs = pst.executeQuery();
+                
                 if (rs.next()) {
+        //aqui se valida el tipo de empleado            
+        String consulta = "SELECT tipo_empleado FROM empleados WHERE usuario='"+ usuario +"'";
+        s=con.createStatement();
+        rs = s.executeQuery (consulta);
+        while (rs.next())
+            { 
+                tipoEmpleado=rs.getInt(1);
+               //System.out.println(tipoEmpleado);
+            }
+        
+        
+                            
+                    
                     this.dispose();
                     Menu m = new Menu();
-                    m.setVisible(true);
+                    m.setVisible(true);                    
                 } else {
 
                     JOptionPane.showMessageDialog(this, "credenciales incorrectas,vuelve a intentarlo");

@@ -18,6 +18,7 @@ vista\registrar_usuarios$6.class
 vista\VentanaPrincipal.class
 vista\Menu$1.class
 controlador\UsuarioNuevos.class
+vista\VentanaIngresarDatos$3.class
 vista\registrar_usuarios$1.class
 controlador\SQLequipaje.class
 vista\permisosjefe$2.class
