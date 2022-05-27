@@ -149,6 +149,7 @@ dispose();
         botonMostrarMozo.setEnabled(false); ;
         }else if(tipoEmpleado == 2){
         botonMostrarrecepcionista.setEnabled(false); ;
+        botonIngresar.setEnabled(false); ;
         }
     }
     /**
