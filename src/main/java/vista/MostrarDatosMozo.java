@@ -4,6 +4,14 @@
  */
 package vista;
 
+import controlador.Conexion;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Srami
@@ -13,10 +21,50 @@ public class MostrarDatosMozo extends javax.swing.JFrame {
     /**
      * Creates new form MostrarDatosMozo
      */
+    DefaultTableModel diseño=new DefaultTableModel();
+    Conexion cc = new Conexion();
+    
+    
+    
+    public void Listar() {
+        LimpiaTabla();
+        Connection con = null;
+        PreparedStatement pst = null;
+        Statement s =null; 
+        ResultSet rs = null;
+        String sql = "SELECT * FROM equipaje";
+        try {
+            con = cc.realizarConexion();
+            s = con.createStatement();
+            rs = s.executeQuery(sql);
+            Object[] equipaje = new Object[5];
+            diseño = (DefaultTableModel) tabla.getModel();
+            while (rs.next()) {
+
+                equipaje[0] = rs.getString("vuelo");
+                equipaje[1] = rs.getString("idequipaje");
+                equipaje[2] = rs.getString("peso");
+
+                diseño.addRow(equipaje);
+            }
+            tabla.setModel(diseño);
+        } catch (SQLException e) {
+        }
+    }
+
+    public void LimpiaTabla() {
+        for (int i = diseño.getRowCount() - 1; i >= 0; i--) {
+            diseño.removeRow(i);
+        }
+    }
     public MostrarDatosMozo() {
         initComponents();
+        String[] titulo= new String[]{"VUELO", "IDEQUIPAJE", "PESO"};
+        diseño.setColumnIdentifiers(titulo);
+        tabla.setModel(diseño);
         setLocationRelativeTo(null);
         this.setResizable(false);
+        Listar();
     }
 
     /**
@@ -31,7 +79,7 @@ public class MostrarDatosMozo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabla = new javax.swing.JTable();
         botonVolver = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -41,7 +89,7 @@ public class MostrarDatosMozo extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -52,7 +100,7 @@ public class MostrarDatosMozo extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabla);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 470, 270));
 
@@ -84,8 +132,8 @@ public class MostrarDatosMozo extends javax.swing.JFrame {
 
     private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
         dispose();
-Menu v= new Menu();
-v.setVisible(true);
+        Menu v= new Menu();
+        v.setVisible(true);
     }//GEN-LAST:event_botonVolverActionPerformed
 
     /**
@@ -99,6 +147,6 @@ v.setVisible(true);
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
 }
