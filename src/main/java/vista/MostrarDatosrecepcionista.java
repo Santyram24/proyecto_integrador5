@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -21,16 +22,14 @@ public class MostrarDatosrecepcionista extends javax.swing.JFrame {
     /**
      * Creates new form VentanaEliminarDatos
      */
-    DefaultTableModel diseño=new DefaultTableModel();
+    DefaultTableModel diseño = new DefaultTableModel();
     Conexion cc = new Conexion();
-    
-    
-    
+
     public void Listar() {
         LimpiaTabla();
         Connection con = null;
         PreparedStatement pst = null;
-        Statement s =null; 
+        Statement s = null;
         ResultSet rs = null;
         String sql = "SELECT * FROM equipaje";
         try {
@@ -59,15 +58,35 @@ public class MostrarDatosrecepcionista extends javax.swing.JFrame {
             diseño.removeRow(i);
         }
     }
-    
+
     public MostrarDatosrecepcionista() {
         initComponents();
-        String[] titulo= new String[]{"IDPASAJERO", "NOMBRE","VUELO", "IDEQUIPAJE", "PESO"};
+        String[] titulo = new String[]{"IDPASAJERO", "NOMBRE", "VUELO", "IDEQUIPAJE", "PESO"};
         diseño.setColumnIdentifiers(titulo);
         tabla.setModel(diseño);
         setLocationRelativeTo(null);
         this.setResizable(false);
         Listar();
+    }
+
+    public void eliminar() {
+        Connection con = null;
+        PreparedStatement eliminar = null;                
+        con = cc.realizarConexion();
+        
+        int fila = tabla.getSelectedRow();
+        String valor=tabla.getValueAt(fila, 0).toString();
+        
+        try {            
+            eliminar=con.prepareStatement("DELETE FROM equipaje WHERE idpasajero='"+valor+"'");
+            eliminar.executeUpdate();
+            Listar();
+             JOptionPane.showMessageDialog(this, "Datos Eliminados Correctamente");
+        } catch (Exception e) {
+             JOptionPane.showMessageDialog(this, "Ocurrio un error,comunicate con los desarrolladores ");
+        }     
+        
+
     }
 
     /**
@@ -105,6 +124,11 @@ public class MostrarDatosrecepcionista extends javax.swing.JFrame {
 
         botonEliminar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         botonEliminar.setText("Eliminar");
+        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, -1, -1));
 
         botonVolver.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -126,14 +150,18 @@ public class MostrarDatosrecepcionista extends javax.swing.JFrame {
 
     private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
         dispose();
-Menu v= new Menu();
-v.setVisible(true);
+        Menu v = new Menu();
+        v.setVisible(true);
     }//GEN-LAST:event_botonVolverActionPerformed
+
+    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+        // TODO add your handling code here:
+        eliminar();
+    }//GEN-LAST:event_botonEliminarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonEliminar;

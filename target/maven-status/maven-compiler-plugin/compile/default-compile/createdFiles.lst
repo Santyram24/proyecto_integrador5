@@ -20,6 +20,7 @@ vista\Menu$1.class
 controlador\UsuarioNuevos.class
 vista\VentanaIngresarDatos$3.class
 vista\registrar_usuarios$1.class
+vista\MostrarDatosrecepcionista$2.class
 controlador\SQLequipaje.class
 vista\permisosjefe$2.class
 vista\MostrarDatosMozo$1.class

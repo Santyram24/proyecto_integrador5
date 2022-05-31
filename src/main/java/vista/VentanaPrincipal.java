@@ -54,9 +54,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             { 
                 tipoEmpleado=rs.getInt(1);
                //System.out.println(tipoEmpleado);
-            }
-        
-        
+            }   
                             
                     
                     this.dispose();
