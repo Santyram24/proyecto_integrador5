@@ -33,7 +33,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.mycompany.vista.ejecutable</mainClass>
+                            <mainClass>vista.ejecutable.java</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

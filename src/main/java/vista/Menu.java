@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.vista;
+package vista;
 
-import static com.mycompany.vista.VentanaPrincipal.tipoEmpleado;
+import static vista.VentanaPrincipal.tipoEmpleado;
 
 /**
  *
