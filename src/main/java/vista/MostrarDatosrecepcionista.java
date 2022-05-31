@@ -83,7 +83,7 @@ public class MostrarDatosrecepcionista extends javax.swing.JFrame {
             Listar();
              JOptionPane.showMessageDialog(this, "Datos Eliminados Correctamente");
         } catch (Exception e) {
-             JOptionPane.showMessageDialog(this, "Ocurrio un error,comunicate con los desarrolladores ");
+             JOptionPane.showMessageDialog(this, "Ocurrio un error,comunicate con los desarrolladores ","error",JOptionPane.WARNING_MESSAGE);
         }     
         
 

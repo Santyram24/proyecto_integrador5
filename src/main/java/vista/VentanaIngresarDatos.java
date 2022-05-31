@@ -158,7 +158,7 @@ v.setVisible(true);
            || cajavuelo.getText().isEmpty() || cajaidequipaje.getText().isEmpty()
            || cajaPeso.getText().isEmpty()){
             
-        JOptionPane.showMessageDialog(this,"Campos Vacios");
+        JOptionPane.showMessageDialog(this,"Campos Vacios","error",JOptionPane.WARNING_MESSAGE);
         
         }else{
             equ.setIDpasajero(cajaidpasajero.getText());
@@ -177,7 +177,7 @@ v.setVisible(true);
                 cajaPeso.setText("");
 
             } else {
-                JOptionPane.showMessageDialog(this, "Error al guardar");
+                JOptionPane.showMessageDialog(this, "Ocurrio un error,comunicate con los desarrolladores ","error",JOptionPane.WARNING_MESSAGE);
 
             }
            

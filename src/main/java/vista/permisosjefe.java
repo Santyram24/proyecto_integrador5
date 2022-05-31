@@ -35,7 +35,7 @@ public class permisosjefe extends javax.swing.JFrame {
         String contraseña = ContraseñaJefe.getText();
 
         if (usuario.equals("") || contraseña.equals("")) {
-            JOptionPane.showMessageDialog(this, "hay un campo vacio, por favor llenarlos");
+            JOptionPane.showMessageDialog(this, "hay un campo vacio, por favor llenarlos","error",JOptionPane.WARNING_MESSAGE);
         } else {
             try {
                 con = cc.realizarConexion();
@@ -48,7 +48,7 @@ public class permisosjefe extends javax.swing.JFrame {
                     m.setVisible(true);
                 } else {
 
-                    JOptionPane.showMessageDialog(this, "credenciales incorrectas,vuelve a intentarlo");
+                    JOptionPane.showMessageDialog(this, "credenciales incorrectas,vuelve a intentarlo","error",JOptionPane.WARNING_MESSAGE);
                     CajaJefe.setText("");
                     ContraseñaJefe.setText("");
 
@@ -56,7 +56,7 @@ public class permisosjefe extends javax.swing.JFrame {
 
             } catch (Exception e) {
                 System.err.println(e.getMessage());
-                JOptionPane.showMessageDialog(this, "Ocurrio un error,comunicate con los desarrolladores ");
+                JOptionPane.showMessageDialog(this, "Ocurrio un error,comunicate con los desarrolladores ","error",JOptionPane.WARNING_MESSAGE);
 
             }
         }

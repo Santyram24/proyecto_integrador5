@@ -192,11 +192,11 @@ public class registrar_usuarios extends javax.swing.JFrame {
                 TextCorreo.setText("");
 
             } else {
-                JOptionPane.showMessageDialog(this, "Error al guardar");
+                JOptionPane.showMessageDialog(this, "Error al guardar","error",JOptionPane.WARNING_MESSAGE);
 
             }
         } else {
-            JOptionPane.showMessageDialog(this, "las contraseñas no coinciden");
+            JOptionPane.showMessageDialog(this, "Ocurrio un error,comunicate con los desarrolladores ","error",JOptionPane.WARNING_MESSAGE);
 
         }
 
