@@ -128,6 +128,7 @@ public class registrar_usuarios extends javax.swing.JFrame {
         });
         jPanel1.add(BtnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, -1, -1));
 
+        resultadoComboBox.setEditable(false);
         resultadoComboBox.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         resultadoComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
