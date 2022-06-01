@@ -1,13 +1,14 @@
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\controlador\Conexion.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\vista\Menu.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\controlador\SQLusuarios.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\vista\registrar_usuarios.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\vista\MostrarDatosrecepcionista.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\controlador\SQLequipaje.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\vista\ejecutable.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\controlador\UsuarioNuevos.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\vista\permisosjefe.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\controlador\DatosEquipaje.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\vista\VentanaPrincipal.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\vista\MostrarDatosMozo.java
-D:\UDEC\5to SEMESTRE\PI\proyecto_integrador5\src\main\java\vista\VentanaIngresarDatos.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/controlador/SQLequipaje.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/controlador/AbsoluteLayout.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/controlador/Conexion.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/vista/VentanaIngresarDatos.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/vista/permisosjefe.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/controlador/DatosEquipaje.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/controlador/UsuarioNuevos.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/vista/MostrarDatosMozo.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/vista/registrar_usuarios.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/vista/VentanaPrincipal.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/controlador/SQLusuarios.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/vista/ejecutable.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/vista/MostrarDatosrecepcionista.java
+/home/santy/NetBeansProjects/proyecto_integrador5/src/main/java/vista/Menu.java

@@ -107,7 +107,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("BIENVENIDO");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 160, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 190, 30));
 
         botonIngresar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         botonIngresar.setText("Ingresar");
